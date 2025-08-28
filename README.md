@@ -52,7 +52,7 @@ Source: [2023 US Civil Flights: Delay, Meteo & Aircraft (Kaggle)](https://www.ka
 ## 🛠 Methods & Models  
 
 ### 1️⃣ Feedforward Neural Network (FFNN)  
-- **Input:** flight + weather + airport features.  
+- **Input:** flight + weather features.  
 - **Architecture:** Dense layers with dropout.  
 - **Optimizer:** Adam, Loss = Binary Crossentropy.  
 - **Purpose:** Establish baseline predictive performance.  
