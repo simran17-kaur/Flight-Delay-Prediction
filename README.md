@@ -36,24 +36,33 @@ Source: [2023 US Civil Flights: Delay, Meteo & Aircraft (Kaggle)](https://www.ka
 - Airport info: traffic volume, location.  
 
 ---
-
-## 🛠 Methods & Models  
-
 ### 🔧 Exploratory Data Analysis  
 - Visualized **delay patterns** (departure vs arrival).  
 - Analyzed **airline-wise and airport-wise performance**.  
 - Correlated **weather factors** with delays.  
-- Identified outliers (early departures, extreme delays).  
-
-### 🤖 Predictive Modeling  
-- Baseline ML models (Logistic Regression, Random Forest).  
-- Deep Learning (Dense Neural Networks).  
-- Feature importance ranking (airport, airline, weather).  
-
----
+- Identified outliers (early departures, extreme delays).
 
 ## 📈 Insights from EDA  
 - Evening flights tend to face higher delays.  
-- Certain airports show recurring delay trends due to congestion/weather.  
 - Weather factors (wind speed, precipitation) significantly affect punctuality.  
 - Airlines vary in performance — some consistently manage on-time schedules better.  
+
+---
+
+## 🛠 Methods & Models  
+
+### 1️⃣ Feedforward Neural Network (FFNN)  
+- **Input:** flight + weather + airport features.  
+- **Architecture:** Dense layers with dropout.  
+- **Optimizer:** Adam, Loss = Binary Crossentropy.  
+- **Purpose:** Establish baseline predictive performance.  
+
+### 2️⃣ Deep & Wide Neural Network (DWNN)  
+- **Wide component:** Linear (shallow) model to capture direct feature interactions.  
+- **Deep component:** Dense hidden layers for high-level abstractions.  
+- **Combined output:** Concatenation of deep + wide layers, passed through softmax.  
+- **Purpose:** Handle both memorization (wide) and generalization (deep). 
+
+---
+
+
